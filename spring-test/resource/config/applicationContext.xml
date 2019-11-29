@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/tx
+       http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="ignoreResourceNotFound">
+			<value>true</value>
+		</property>
+
+		<property name="locations">
+			<list>
+				<value>classpath:config/ApplicationConfig.properties</value>
+				<!-- <value>file:${TX_CONF_PATH}/application${SERVER_ID}.properties </value> -->
+			</list>
+		</property>
+		<property name="fileEncoding" value="utf-8" />
+
+	</bean>
+
+	<context:component-scan base-package="config.**.*" />
+
+	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+		<!-- <property name="driverClassName">
+			<value>com.mysql.jdbc.Driver</value>
+		</property> -->
+		<property name="driverClassName" value="${db.driver}" />
+		<!-- <property name="driver" value="com.mysql.jdbc.Driver" /> -->
+		<property name="url" value="${db.url}" />
+		<property name="username" value="${db.user}" />
+		<property name="password" value="${db.password}" />
+	</bean>
+
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="configLocation" value="classpath:config/mybatis-config.xml" />
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations">
+			<array>
+				<value>classpath:config/sql/*.xml</value>
+			</array>
+		</property>
+		<property name="typeAliasesPackage" value="config" />
+	</bean>
+	
+	
+	<bean id="sqlsessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactory" />
+	</bean>
+
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="addToConfig" value="true" />
+		<property name="basePackage" value="config.**.dao" />
+	</bean>
+
+
+
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<!-- isolation="DEFAULT/READ_COMMITTED/READ_UNCOMMITTED/REPEATABLE_READ/SERIALIZABLE" 
+				PROPAGATION_REQUIRED ,PROPAGATION_SUPPORTS,PROPAGATION_MANDATORY ,PROPAGATION_REQUIRES_NEW 
+				,PROPAGATION_NOT_SUPPORTED,PROPAGATION_NEVER,PROPAGATION_NESTED timeout="20" -->
+			<tx:method name="insert*" propagation="REQUIRED" isolation="READ_COMMITTED" />
+			<tx:method name="create*" propagation="REQUIRED" isolation="READ_COMMITTED" />
+			<tx:method name="add*" propagation="REQUIRED" isolation="READ_COMMITTED" />
+			<tx:method name="save*" propagation="REQUIRED" isolation="READ_COMMITTED" />
+			<tx:method name="update*" propagation="REQUIRED" isolation="READ_COMMITTED" />
+			<tx:method name="delete*" propagation="REQUIRED" isolation="READ_COMMITTED" />
+			<tx:method name="destroy*" propagation="REQUIRED"
+				isolation="READ_COMMITTED" />
+			<tx:method name="remove*" propagation="REQUIRED" isolation="READ_COMMITTED" />
+			<tx:method name="upgrade*" propagation="REQUIRED"
+				isolation="READ_COMMITTED" />
+			<tx:method name="demote*" propagation="REQUIRED" isolation="READ_COMMITTED" />
+			<tx:method name="login*" propagation="REQUIRED" isolation="READ_COMMITTED" />
+			<tx:method name="logout*" propagation="REQUIRED" isolation="READ_COMMITTED" />
+			<tx:method name="finish*" propagation="REQUIRED" isolation="READ_COMMITTED" />
+			<tx:method name="cancel*" propagation="REQUIRED" isolation="READ_COMMITTED" />
+			<tx:method name="do*" propagation="REQUIRED" isolation="READ_COMMITTED" />
+			<tx:method name="compose*" propagation="REQUIRED"
+				isolation="READ_COMMITTED" />
+			<tx:method name="fast*" propagation="REQUIRED" isolation="READ_COMMITTED" />
+			<tx:method name="notify*" propagation="REQUIRED" isolation="READ_COMMITTED" />
+
+			<tx:method name="*" propagation="SUPPORTS" />
+
+		</tx:attributes>
+	</tx:advice>
+
+<!-- 	<aop:aspectj-autoproxy/> -->
+ 	<aop:config proxy-target-class="true" /> 
+	<aop:config>
+		<!-- <aop:advisor pointcut="execution(* config..*.service.*(..))" -->
+		<aop:advisor pointcut="${aop_expression}"
+			advice-ref="txAdvice" />
+
+	</aop:config>
+
+
+
+
+	<bean id="transactionManager" class="config.LocalDataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+
+
+
+</beans>

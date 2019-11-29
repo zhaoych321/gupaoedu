@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="config.user.dao.CUserDAO">
+  <resultMap id="BaseResultMap" type="config.user.domain.CUser">
+    <id column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="exp" jdbcType="INTEGER" property="exp" />
+    <result column="comment" jdbcType="VARCHAR" property="comment" />
+    <result column="has_released_guild" jdbcType="BIT" property="hasReleasedGuild" />
+    <result column="has_released_league" jdbcType="BIT" property="hasReleasedLeague" />
+    <result column="has_released_pvp" jdbcType="BIT" property="hasReleasedPvp" />
+    <result column="has_released_arousal" jdbcType="BIT" property="hasReleasedArousal" />
+    <result column="has_released_power_up" jdbcType="BIT" property="hasReleasedPowerUp" />
+    <result column="has_released_inherit" jdbcType="BIT" property="hasReleasedInherit" />
+    <result column="pvp_grade_id" jdbcType="INTEGER" property="pvpGradeId" />
+    <result column="pvp_grade_id_updated_at" jdbcType="INTEGER" property="pvpGradeIdUpdatedAt" />
+    <result column="pvp_standard_grade_id" jdbcType="INTEGER" property="pvpStandardGradeId" />
+    <result column="pvp_standard_grade_id_updated_at" jdbcType="INTEGER" property="pvpStandardGradeIdUpdatedAt" />
+    <result column="tutorial_phase" jdbcType="TINYINT" property="tutorialPhase" />
+    <result column="team_name" jdbcType="VARCHAR" property="teamName" />
+    <result column="language_code" jdbcType="TINYINT" property="languageCode" />
+    <result column="updated_at" jdbcType="INTEGER" property="updatedAt" />
+    <result column="created_at" jdbcType="INTEGER" property="createdAt" />
+    <result column="total_pay_amount" jdbcType="INTEGER" property="totalPayAmount" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="config.user.domain.CUser">
+    <result column="bi_log_json" jdbcType="LONGVARCHAR" property="biLogJson" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    user_id, `name`, `exp`, `comment`, has_released_guild, has_released_league, has_released_pvp, 
+    has_released_arousal, has_released_power_up, has_released_inherit, pvp_grade_id, 
+    pvp_grade_id_updated_at, pvp_standard_grade_id, pvp_standard_grade_id_updated_at, 
+    tutorial_phase, team_name, language_code, updated_at, created_at, total_pay_amount
+  </sql>
+  <sql id="Blob_Column_List">
+    bi_log_json
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="int" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from c_user
+    where user_id = #{userId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="int">
+    delete from c_user
+    where user_id = #{userId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="config.user.domain.CUser">
+    insert into c_user (user_id, `name`, `exp`, 
+      `comment`, has_released_guild, has_released_league, 
+      has_released_pvp, has_released_arousal, has_released_power_up, 
+      has_released_inherit, pvp_grade_id, pvp_grade_id_updated_at, 
+      pvp_standard_grade_id, pvp_standard_grade_id_updated_at, 
+      tutorial_phase, team_name, language_code, 
+      updated_at, created_at, total_pay_amount, 
+      bi_log_json)
+    values (#{userId,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{exp,jdbcType=INTEGER}, 
+      #{comment,jdbcType=VARCHAR}, #{hasReleasedGuild,jdbcType=BIT}, #{hasReleasedLeague,jdbcType=BIT}, 
+      #{hasReleasedPvp,jdbcType=BIT}, #{hasReleasedArousal,jdbcType=BIT}, #{hasReleasedPowerUp,jdbcType=BIT}, 
+      #{hasReleasedInherit,jdbcType=BIT}, #{pvpGradeId,jdbcType=INTEGER}, #{pvpGradeIdUpdatedAt,jdbcType=INTEGER}, 
+      #{pvpStandardGradeId,jdbcType=INTEGER}, #{pvpStandardGradeIdUpdatedAt,jdbcType=INTEGER}, 
+      #{tutorialPhase,jdbcType=TINYINT}, #{teamName,jdbcType=VARCHAR}, #{languageCode,jdbcType=TINYINT}, 
+      #{updatedAt,jdbcType=INTEGER}, #{createdAt,jdbcType=INTEGER}, #{totalPayAmount,jdbcType=INTEGER}, 
+      #{biLogJson,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="config.user.domain.CUser">
+    insert into c_user
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      user_id,
+      <if test="name != null">
+        `name`,
+      </if>
+      `exp`,
+      <if test="comment != null">
+        `comment`,
+      </if>
+      has_released_guild,
+      has_released_league,
+      has_released_pvp,
+      has_released_arousal,
+      has_released_power_up,
+      has_released_inherit,
+      pvp_grade_id,
+      pvp_grade_id_updated_at,
+      pvp_standard_grade_id,
+      pvp_standard_grade_id_updated_at,
+      tutorial_phase,
+      <if test="teamName != null">
+        team_name,
+      </if>
+      language_code,
+      updated_at,
+      created_at,
+      total_pay_amount,
+      <if test="biLogJson != null">
+        bi_log_json,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      #{userId,jdbcType=INTEGER},
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      #{exp,jdbcType=INTEGER},
+      <if test="comment != null">
+        #{comment,jdbcType=VARCHAR},
+      </if>
+      #{hasReleasedGuild,jdbcType=BIT},
+      #{hasReleasedLeague,jdbcType=BIT},
+      #{hasReleasedPvp,jdbcType=BIT},
+      #{hasReleasedArousal,jdbcType=BIT},
+      #{hasReleasedPowerUp,jdbcType=BIT},
+      #{hasReleasedInherit,jdbcType=BIT},
+      #{pvpGradeId,jdbcType=INTEGER},
+      #{pvpGradeIdUpdatedAt,jdbcType=INTEGER},
+      #{pvpStandardGradeId,jdbcType=INTEGER},
+      #{pvpStandardGradeIdUpdatedAt,jdbcType=INTEGER},
+      #{tutorialPhase,jdbcType=TINYINT},
+      <if test="teamName != null">
+        #{teamName,jdbcType=VARCHAR},
+      </if>
+      #{languageCode,jdbcType=TINYINT},
+      #{updatedAt,jdbcType=INTEGER},
+      #{createdAt,jdbcType=INTEGER},
+      #{totalPayAmount,jdbcType=INTEGER},
+      <if test="biLogJson != null">
+        #{biLogJson,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="config.user.domain.CUser">
+    update c_user
+    <set>
+      <if test="name != null">
+        `name` = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="exp != null">
+        `exp` = #{exp,jdbcType=INTEGER},
+      </if>
+      <if test="comment != null">
+        `comment` = #{comment,jdbcType=VARCHAR},
+      </if>
+      <if test="hasReleasedGuild != null">
+        has_released_guild = #{hasReleasedGuild,jdbcType=BIT},
+      </if>
+      <if test="hasReleasedLeague != null">
+        has_released_league = #{hasReleasedLeague,jdbcType=BIT},
+      </if>
+      <if test="hasReleasedPvp != null">
+        has_released_pvp = #{hasReleasedPvp,jdbcType=BIT},
+      </if>
+      <if test="hasReleasedArousal != null">
+        has_released_arousal = #{hasReleasedArousal,jdbcType=BIT},
+      </if>
+      <if test="hasReleasedPowerUp != null">
+        has_released_power_up = #{hasReleasedPowerUp,jdbcType=BIT},
+      </if>
+      <if test="hasReleasedInherit != null">
+        has_released_inherit = #{hasReleasedInherit,jdbcType=BIT},
+      </if>
+      <if test="pvpGradeId != null">
+        pvp_grade_id = #{pvpGradeId,jdbcType=INTEGER},
+      </if>
+      <if test="pvpGradeIdUpdatedAt != null">
+        pvp_grade_id_updated_at = #{pvpGradeIdUpdatedAt,jdbcType=INTEGER},
+      </if>
+      <if test="pvpStandardGradeId != null">
+        pvp_standard_grade_id = #{pvpStandardGradeId,jdbcType=INTEGER},
+      </if>
+      <if test="pvpStandardGradeIdUpdatedAt != null">
+        pvp_standard_grade_id_updated_at = #{pvpStandardGradeIdUpdatedAt,jdbcType=INTEGER},
+      </if>
+      <if test="tutorialPhase != null">
+        tutorial_phase = #{tutorialPhase,jdbcType=TINYINT},
+      </if>
+      <if test="teamName != null">
+        team_name = #{teamName,jdbcType=VARCHAR},
+      </if>
+      <if test="languageCode != null">
+        language_code = #{languageCode,jdbcType=TINYINT},
+      </if>
+      <if test="updatedAt != null">
+        updated_at = #{updatedAt,jdbcType=INTEGER},
+      </if>
+      <if test="createdAt != null">
+        created_at = #{createdAt,jdbcType=INTEGER},
+      </if>
+      <if test="totalPayAmount != null">
+        total_pay_amount = #{totalPayAmount,jdbcType=INTEGER},
+      </if>
+      <if test="biLogJson != null">
+        bi_log_json = #{biLogJson,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where user_id = #{userId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="config.user.domain.CUser">
+    update c_user
+    set `name` = #{name,jdbcType=VARCHAR},
+      `exp` = #{exp,jdbcType=INTEGER},
+      `comment` = #{comment,jdbcType=VARCHAR},
+      has_released_guild = #{hasReleasedGuild,jdbcType=BIT},
+      has_released_league = #{hasReleasedLeague,jdbcType=BIT},
+      has_released_pvp = #{hasReleasedPvp,jdbcType=BIT},
+      has_released_arousal = #{hasReleasedArousal,jdbcType=BIT},
+      has_released_power_up = #{hasReleasedPowerUp,jdbcType=BIT},
+      has_released_inherit = #{hasReleasedInherit,jdbcType=BIT},
+      pvp_grade_id = #{pvpGradeId,jdbcType=INTEGER},
+      pvp_grade_id_updated_at = #{pvpGradeIdUpdatedAt,jdbcType=INTEGER},
+      pvp_standard_grade_id = #{pvpStandardGradeId,jdbcType=INTEGER},
+      pvp_standard_grade_id_updated_at = #{pvpStandardGradeIdUpdatedAt,jdbcType=INTEGER},
+      tutorial_phase = #{tutorialPhase,jdbcType=TINYINT},
+      team_name = #{teamName,jdbcType=VARCHAR},
+      language_code = #{languageCode,jdbcType=TINYINT},
+      updated_at = #{updatedAt,jdbcType=INTEGER},
+      created_at = #{createdAt,jdbcType=INTEGER},
+      total_pay_amount = #{totalPayAmount,jdbcType=INTEGER},
+      bi_log_json = #{biLogJson,jdbcType=LONGVARCHAR}
+    where user_id = #{userId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="config.user.domain.CUser">
+    update c_user
+    set `name` = #{name,jdbcType=VARCHAR},
+      `exp` = #{exp,jdbcType=INTEGER},
+      `comment` = #{comment,jdbcType=VARCHAR},
+      has_released_guild = #{hasReleasedGuild,jdbcType=BIT},
+      has_released_league = #{hasReleasedLeague,jdbcType=BIT},
+      has_released_pvp = #{hasReleasedPvp,jdbcType=BIT},
+      has_released_arousal = #{hasReleasedArousal,jdbcType=BIT},
+      has_released_power_up = #{hasReleasedPowerUp,jdbcType=BIT},
+      has_released_inherit = #{hasReleasedInherit,jdbcType=BIT},
+      pvp_grade_id = #{pvpGradeId,jdbcType=INTEGER},
+      pvp_grade_id_updated_at = #{pvpGradeIdUpdatedAt,jdbcType=INTEGER},
+      pvp_standard_grade_id = #{pvpStandardGradeId,jdbcType=INTEGER},
+      pvp_standard_grade_id_updated_at = #{pvpStandardGradeIdUpdatedAt,jdbcType=INTEGER},
+      tutorial_phase = #{tutorialPhase,jdbcType=TINYINT},
+      team_name = #{teamName,jdbcType=VARCHAR},
+      language_code = #{languageCode,jdbcType=TINYINT},
+      updated_at = #{updatedAt,jdbcType=INTEGER},
+      created_at = #{createdAt,jdbcType=INTEGER},
+      total_pay_amount = #{totalPayAmount,jdbcType=INTEGER}
+    where user_id = #{userId,jdbcType=INTEGER}
+  </update>
+</mapper>
