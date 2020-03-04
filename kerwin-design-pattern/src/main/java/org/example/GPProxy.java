@@ -108,28 +108,4 @@ public class GPProxy {
         mappings.put(double.class,Double.class);
         mappings.put(float.class,Float.class);
     }
-//    private static String getReturnEmptyCode(Class<?> returnClass){
-//        if(mappings.containsKey(returnClass)){
-//            return "return 0;";
-//        }else if(returnClass == void.class){
-//            return "";
-//        }else {
-//            return "return null;";
-//        }
-//    }
-//    private static String getCaseCode(String code,Class<?> returnClass){
-//        if(mappings.containsKey(returnClass)){
-//            return "((" + mappings.get(returnClass).getName() + ")" + code + ")." + returnClass.getSimpleName() +
-//                    "Value()";
-//        }
-//        return code;
-//    }
-//    private static boolean hasReturnValue(Class<?> clazz){
-//        return clazz != void.class;
-//    }
-//    private static String toLowerFirstCase(String src){
-//        char [] chars = src.toCharArray();
-//        chars[0] += 32;
-//        return String.valueOf(chars);
-//    }
 }
