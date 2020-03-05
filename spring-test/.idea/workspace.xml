@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="829ce949-7767-4bee-852d-ace3c51db01b" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1VPe6zRmmxOTOaChuY4CPuictoi" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="829ce949-7767-4bee-852d-ace3c51db01b" name="Default Changelist" comment="" />
+      <created>1577158985697</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1577158985697</updated>
+      <workItem from="1577158988097" duration="249000" />
+      <workItem from="1577159248058" duration="65000" />
+      <workItem from="1577159357209" duration="116000" />
+      <workItem from="1577159969801" duration="392000" />
+      <workItem from="1577160379435" duration="37000" />
+      <workItem from="1577160599075" duration="28000" />
+      <workItem from="1577160922050" duration="36000" />
+      <workItem from="1577160968093" duration="76000" />
+      <workItem from="1577161144232" duration="34000" />
+      <workItem from="1577161190646" duration="74000" />
+      <workItem from="1577161278651" duration="294000" />
+      <workItem from="1577161582646" duration="42000" />
+      <workItem from="1577161634899" duration="14000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="180" key="#Custom_Plugin_Repositories" timestamp="1577161486168">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="180" key="#Custom_Plugin_Repositories/0.0.1920.1040@0.0.1920.1040" timestamp="1577161486168" />
+    <state x="552" y="180" key="#HTTP_Proxy" timestamp="1577161489218">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="180" key="#HTTP_Proxy/0.0.1920.1040@0.0.1920.1040" timestamp="1577161489218" />
+    <state x="463" y="164" key="SettingsEditor" timestamp="1577161622321">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="463" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1577161622321" />
+    <state x="652" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1577161638251">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="652" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1577161638251" />
+    <state x="598" y="80" width="967" height="880" key="new project wizard" timestamp="1577161592345">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="598" y="80" width="967" height="880" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1577161592345" />
+  </component>
+</project>

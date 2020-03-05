@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Premain-Class: trans.Premain
+Agent-Class: trans.Premain
+Created-By: 1.6.0_45 (Sun Microsystems Inc.)
+Can-Redefine-Classes: true
