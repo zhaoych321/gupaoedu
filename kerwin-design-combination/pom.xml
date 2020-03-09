@@ -4,20 +4,13 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>thread</groupId>
-  <artifactId>com.test.thread</artifactId>
+  <groupId>org.example</groupId>
+  <artifactId>kerwin-design-combination</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>com.test.thread</name>
+  <name>kerwin-design-combination</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
-
-  <repositories>
-    <repository>
-      <id>aliyunmaven</id>
-      <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
-    </repository>
-  </repositories>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
