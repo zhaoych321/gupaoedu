@@ -65,8 +65,8 @@ public class ClientMain {
 //		        	String mailcontent = new String(Base64.encode(content.getBytes("UTF-8")));
 //					String outputXmlStr = "<cmd_command cmd_data=\"FullServiceMail\" sendtitle=\""+content+"\" starttime=\"2016-10-24 18:20:00\" endtime=\"2018-02-24 19:00:00\" sendplayer=\"仙剑研发组\" mailcontent=\""+mailcontent+"\" item=\"\" bindyuanbao=\"0\" money=\"1000\" stone=\"0\" yuanbao=\"13000\"/>";
 //					String outputXmlStr = "<cmd_command cmd_data=\"ChangeRoleName\" roleid=\""+155728+"\" rolename=\"无情无痕\"/>";
-					String outputXmlStr = "<cmd_command cmd_data=\"ChangeFactionName\" roleid=\""+155728+"\" factionname=\"无情2\"/>";
-					
+//					String outputXmlStr = "<cmd_command cmd_data=\"ChangeFactionName\" roleid=\""+155728+"\" factionname=\"无情2\"/>";
+					String outputXmlStr = "<cmd_command cmd_data=\"Gm\"  content=\"tt 49182675\"/>";
 					DataOutputStream dataoutputstream = new DataOutputStream(socket.getOutputStream());
 					
 					byte[] outputXmlBytesArr = outputXmlStr.getBytes("UTF-8");
@@ -162,7 +162,8 @@ public class ClientMain {
 //	    	Socket socket = new Socket("127.0.0.1",1102);  //本地
 	    	//Socket socket = new Socket("192.168.2.175",26434);  //本地
 	    	//Socket socket = new Socket("192.168.2.134",26484);  //本地
-	    	Socket socket = new Socket("192.168.64.34",35334);  //分支
+//	    	Socket socket = new Socket("192.168.64.34",35334);  //分支
+	    	Socket socket = new Socket("123.206.96.31",30034);  //分支
 //	    	Socket socket = new Socket("127.0.0.1",30034);  //机器人  服务器serverid 999
 	        new SendThread(socket, i).start();  
 	        new ReceiveThread(socket).start(); 
