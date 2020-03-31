@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b1663f3-6f66-4899-b83c-042131362d89" name="Default Changelist" comment="" />
+    <list default="true" id="8aa012c4-0e6b-4670-9434-228c52bd9d73" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CoverageViewManager">
-    <option name="myElementSize" value="241" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-        <option value="Interface" />
-      </list>
-    </option>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -26,7 +23,8 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="1YdkDa7g6uZEbQQrEYcfkuqmTeM" />
+  <component name="ProjectId" id="1Zh3YWh4nC2H0vfKL1cxbnSzduC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -34,59 +32,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/org/example/jdk" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\workspace\kerwin-design-pattern\src\main\java\org\example" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\workspace\kerwin-design-pattern\src\main\java\org\example\jdk" />
-      <recent name="F:\workspace\kerwin-design-pattern\src\main\java\org\example" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Application.JDKProxyTest">
-    <configuration name="JDKProxyTest (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.jdk.JDKProxyTest" />
-      <module name="kerwin-design-pattern" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.jdk.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JDKProxyTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.JDKProxyTest" />
-      <module name="kerwin-design-pattern" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.JDKProxyTest" />
-        <item itemvalue="Application.JDKProxyTest (1)" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -105,12 +54,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4b1663f3-6f66-4899-b83c-042131362d89" name="Default Changelist" comment="" />
-      <created>1583279739256</created>
+      <changelist id="8aa012c4-0e6b-4670-9434-228c52bd9d73" name="Default Changelist" comment="" />
+      <created>1585277546045</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1583279739256</updated>
-      <workItem from="1583279752045" duration="9019000" />
+      <updated>1585277546045</updated>
+      <workItem from="1585277549814" duration="680000" />
     </task>
     <servers />
   </component>
@@ -118,58 +67,25 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="590" y="263" key="#com.intellij.ide.util.ExportDialog" timestamp="1583289976022">
+    <state width="1860" height="279" key="GridCell.Tab.0.bottom" timestamp="1585279193015">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="590" y="263" key="#com.intellij.ide.util.ExportDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583289976022" />
-    <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser" timestamp="1583288744306">
+    <state width="1860" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585279193015" />
+    <state width="1860" height="279" key="GridCell.Tab.0.center" timestamp="1585279193015">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1583288744306" />
-    <state x="675" y="217" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog" timestamp="1583287715723">
+    <state width="1860" height="279" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585279193015" />
+    <state width="1860" height="279" key="GridCell.Tab.0.left" timestamp="1585279193015">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="675" y="217" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583287715723" />
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1583290281549">
+    <state width="1860" height="279" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585279193015" />
+    <state width="1860" height="279" key="GridCell.Tab.0.right" timestamp="1585279193015">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583290281549" />
-    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1583290281548">
+    <state width="1860" height="279" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585279193015" />
+    <state x="334" y="223" key="new project wizard" timestamp="1585279190164">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583290281548" />
-    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1583290281548">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583290281548" />
-    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1583290281548">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583290281548" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1583290281463">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583290281463" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1583290281463">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583290281463" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1583290281462">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583290281462" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1583290281463">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583290281463" />
-    <state x="613" y="160" width="694" height="720" key="find.popup" timestamp="1583288492642">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="613" y="160" width="694" height="720" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1583288492642" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/kerwin_design_pattern$JDKProxyTest.ic" NAME="JDKProxyTest Coverage Results" MODIFIED="1583288823175" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>org.example.*</FILTER>
-    </SUITE>
+    <state x="334" y="223" key="new project wizard/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585279190164" />
   </component>
 </project>
