@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="springboot-rabbit-consumer" />
+        <module name="springboot-rabbit-producer" />
+        <module name="gupaoedu-vip-spring-rabbitmq" />
+        <module name="gupaoedu-vip-rabbitmq-javaapi" />
+        <module name="gupaoedu-vip-springboot-demo" />
+        <module name="gupaoedu-vip-springboot-amqp" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="gupaoedu-vip-rabbitmq-javaapi" target="11" />
+      <module name="gupaoedu-vip-spring-rabbitmq" target="11" />
+      <module name="gupaoedu-vip-springboot-amqp" target="11" />
+      <module name="gupaoedu-vip-springboot-demo" target="11" />
+      <module name="gupaoedu-vip-springboot-project" target="11" />
+      <module name="springboot-rabbit-consumer" target="11" />
+      <module name="springboot-rabbit-producer" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="gupaoedu-vip-springboot-amqp" options="-parameters" />
+      <module name="gupaoedu-vip-springboot-demo" options="-parameters" />
+      <module name="springboot-rabbit-consumer" options="-parameters" />
+      <module name="springboot-rabbit-producer" options="-parameters" />
+    </option>
+  </component>
+</project>
